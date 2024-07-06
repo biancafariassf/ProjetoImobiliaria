@@ -1,0 +1,49 @@
+<div class="container">
+    <br>
+    <h4>Consultar - Agendamento de Visitas</h4>
+
+
+    <form action="/consultar" method="GET" class="form-inline mb-4">
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="nome" class="sr-only">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Buscar por nome">
+        </div>
+        <button type="submit" class="btn btn-dark mb-2">Buscar</button>
+    </form>
+
+    <p>Lista de Agendamentos:</p>
+
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Data da visita</th>
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+            {{#each agendamentos}}
+                <tr>
+                    <td>{{this.data.nome}}</td>
+                    <td>{{this.data.cpf}}</td>
+                    <td>{{this.data.email}}</td>
+                    <td>{{this.data.telefone}}</td>
+                    <td>{{this.data.dataVisita}}</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-primary mb-2" style="background-color: rgb(0, 0, 0);"><a href="/editar/{{this.id}}">Editar</a></button>
+                        <button type="button" class="btn text-light" style="background-color: darkred; "><a href="/excluir/{{this.id}}">Excluir</a></button>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    {{#if mensagem}}
+        <p>{{mensagem}}</p>
+    {{/if}}
+</div>

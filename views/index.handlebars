@@ -1,0 +1,101 @@
+<div class="container mt-4">
+    <h4>Casas Disponíveis</h4>
+    <div class="row">
+        <div class="col-md-4 mb-4"> 
+            <div class="card">
+                <img src="/public/img/casa1.jpg" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Casa Bela</h5>
+                    <p class="card-text">Localização: Rua das Flores, 123</p>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#agendarVisitaModal" data-id="1">Agendar Visita</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4"> 
+            <div class="card">
+                <img src="/public/img/casa2.jpg" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Casa Moderna</h5>
+                    <p class="card-text">Localização: Av. Paulista, 456</p>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#agendarVisitaModal" data-id="2">Agendar Visita</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4"> 
+            <div class="card">
+                <img src="/public/img/casa3.png" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Casa Luxuosa</h5>
+                    <p class="card-text">Localização: Alameda Santos, 789</p>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#agendarVisitaModal" data-id="3">Agendar Visita</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4"> 
+            <div class="card">
+                <img src="/public/img/apartamento1.jpg" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Apartamento Baby</h5>
+                    <p class="card-text">Localização: Rua Peter, 157</p>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#agendarVisitaModal" data-id="3">Agendar Visita</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4"> 
+            <div class="card">
+                <img src="/public/img/apartamento2.jpg" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Apartamento Like</h5>
+                    <p class="card-text">Localização: Rua das flores, 958</p>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#agendarVisitaModal" data-id="3">Agendar Visita</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4"> 
+            <div class="card">
+                <img src="/public/img/apartamento3.jpg" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Apartamento Ilha</h5>
+                    <p class="card-text">Localização: Rua treze de novembro, 147</p>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#agendarVisitaModal" data-id="3">Agendar Visita</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  <div class="modal fade" id="agendarVisitaModal" tabindex="-1" aria-labelledby="agendarVisitaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="agendarVisitaModalLabel">Agendar Visita</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/cadastrar" method="POST">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nome: </label>
+                            <input type="text" class="form-control" id="nome" name="nome" aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="mb-3">
+                             <label for="exampleInputEmail1" class="form-label">CPF:</label>
+                            <input type="cpf" class="form-control" id="cpf" name="cpf" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                             <label for="exampleInputEmail1" class="form-label">Telefone:</label>
+                            <input type="tel" class="form-control" id="telefone" name="telefone" aria-describedby="emailHelp" required>
+                        </div>
+                        <div class="mb-3">
+                             <label for="exampleInputEmail1" class="form-label">Data da Visita:</label>
+                            <input type="date" class="form-control" id="dataVisita" name="dataVisita" required>
+                        </div>
+                        <button type="submit" class="btn btn-dark">Agendar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
